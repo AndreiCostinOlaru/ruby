@@ -1,24 +1,50 @@
-# README
+# Weblog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple blog application built with Rails 8.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- Ruby 3.4.4
+- SQLite3
+- Node.js (for asset pipeline)
 
-* System dependencies
+## Setup
 
-* Configuration
+```bash
+# Install dependencies
+bundle install
 
-* Database creation
+# Setup database
+bin/rails db:prepare
 
-* Database initialization
+# Start server
+bin/rails server
+```
 
-* How to run the test suite
+Visit http://localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
+## Features
 
-* Deployment instructions
+- Create and view blog posts
+- Rails 8 with Hotwire
+- SQLite database
 
-* ...
+## Testing
+
+```bash
+bin/rails test
+bin/rails test:system
+```
+
+## Deployment
+
+Configured for deployment with Kamal:
+
+```bash
+bin/kamal deploy
+```
+
+## Code Quality
+
+- RuboCop for linting: `bin/rubocop`
+- Brakeman for security: `bin/brakeman`
